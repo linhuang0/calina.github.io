@@ -3,9 +3,9 @@
 <head>
    <meta charset="utf-8">
    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-   <meta name="description" content="Automated Order Submission Project.">
+   <meta name="description" content="School Projects.">
    <meta name="author" content="Calina">
-   <title>Calina Landing page | Components</title>
+   <title>Calina School Projects</title>
    <!-- font icons -->
    <link rel="stylesheet" href="assets/vendors/themify-icons/css/themify-icons.css">
    <!-- Bootstrap + Steller  -->
@@ -48,14 +48,65 @@
 
    <!-- main content -->
    <div class="container"> 
+      <button class="btn btn-outline-primary" onclick="window.location.href='school_projects.html';">School Projects</button>
       <button class="btn btn-outline-primary" onclick="window.location.href='dashboards.html';">Dashboards </button>
       <button class="btn btn-outline-primary" onclick="window.location.href='data_analytics.html';">Data Analystics</button>
       <button class="btn btn-outline-primary" onclick="window.location.href='web_dev.html';">Web development</button>
       <button class="btn btn-outline-primary" onclick="window.location.href='project_automation.html';" >Automation</button>
-      <button class="btn btn-outline-primary" >Quantitative-analysis</button>
+      <button class="btn btn-outline-primary" onclick="window.location.href='qa.html';">Quantitative-analysis</button>
       <button class="btn btn-outline-primary">Machine Learning</button>
-      <button class="btn btn-outline-primary" onclick="window.location.href='school_projects.html';">School Projects</button>
       <br>
+      <section class="section" id="corpus-building">  
+         <!-- Buttons -->
+         <h1 class="mt-5">Corpus Building Project</h1>
+         <span class="badge badge-success">Automate</span> 
+         <span class="badge badge-dark">Data Extraction </span>
+         <span class="badge badge-warning">Jupyter Notebook</span>
+         <span class="badge badge-info">Data Scrape</span>
+          <span class="badge badge-danger">Python</span>
+         <br>
+         <hr>
+         <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='https://github.com/linhuang0/corpus_building';" >  VIEW CODE </button>
+         <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='Corpus  Building  Project  Report - Media Perspectives on COVID-19 Vaccine in New Zealand and Australia.pdf';" >  VIEW REPORT </button>
+         <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='https://jupyterhub.canterbury.ac.nz/DIGIteaching/user/lhu97/lab/tree/project/groupe_project.ipynb';" > Link to Jupyter Notebooks   </button>            
+         <ul class="list-unstyled">
+            <br>
+            <dt class="col-sm-3">Instructions:</dt>
+            <li>
+               The COVID-19 pandemic is a collective challenge to people everywhere, but responses and experiences differ greatly and there are many perspectives or points of view on COVID-19 or policies or phenomena associated with the pandemic (e.g. lockdowns).
+            </li>
+            <br>
+            <dt class="col-sm-3">Solution:</dt>
+            <li>Employing "covid 19 vaccine" as the keyword, we retrieved the news article related to the project's topic from both nzherald.co.nz and abc.net.au. To ensure a collection of texts closely aligned with our topic, these results were then organized according to their relevance using the sort option provided by the website. Upon a review of the search results obtained from abc.net.au, it came to our attention that among the retrieved content, there were radio news articles, Chinese news articles etc. Given that our project centres around the construction of a text-based corpus, a decision was made to further refine the search results by selecting “ABC News” category in the filters. Then we applied Webscraper.io as our web scraping tool. 
+            </li>
+            <br>
+            <ul>  
+               <li>
+                  The first step is to create a site map for our target website. Utilizing the Inspector within Chrome Developer tools, we can inspect the CSS selector for each section of the website which helps us to construct the site map.  
+               </li>
+               <br>
+               <li>
+                  The second step is to scrap the information. By selecting "Scrape" from the dropdown menu of the sitemap, we can extract the data and subsequently export it as a CSV file. 
+               </li>
+               <br>
+               <li>
+                  The third step is to transform CSV file to text file. This step will focus on retaining the last 100 text articles, which represent the most relevant ones based on the sorting by relevance conducted earlier. 
+               </li>
+               <li>
+                  The last step is to run the jupternotebook Scrapey.ipynb to export the content into a directory of text files.  
+               </li>
+            </ul>
+            <br>
+            <li>
+               During this process, a significant challenge arises in the form of selecting the appropriate selector, particularly when dealing with pagination and timestamp. On nzherald.co.nz, article timestamps are stored using two different methods: one is individually, making it easily extractable, while the other is embedded within a title picture. Therefore, an extra timestamp selector has been incorporated to retrieve the embedded information. 
+            </li>
+            <br>
+            <li>
+               Another challenge we faced during the process was the selection of the top 50 most relevant articles. Initially, we manually curated these articles from the pool of text files we had gathered from the website. However, upon closer examination, we discerned a pattern in the arrangement of articles within the CSV file. The articles were sorted in ascending order of relevance, with the most relevant article located at the end. Leveraging this observation, we modified our approach. We decided to retain only the last 100 articles within the CSV file, as these represented the most relevant ones, and subsequently converted them into individual text files. This adaptation allowed us to automate the selection process while ensuring the inclusion of the articles that are most closely aligned with our research objectives. 
+            </li>
+         </ul>
+      </section>
+
       <section class="section" id="data-mining">  
          <!-- Buttons -->
          <h1 class="mt-5">Data Mining</h1>
@@ -133,18 +184,6 @@
          <hr>
          <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='https://github.com/linhuang0/Analysis_of_juvenile_crime_trends';" >  VIEW CODE </button>
          <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='Analysis of juvenile crime-trends during COVID-19.html';" >  VIEW REPORT </button>
-      </section>
-      <section class="section" id="relationship-height-size">  
-         <!-- Buttons -->
-         <h1 class="mt-5">A Study on the Relationship between Height and Foot Size</h1>
-         <span class="badge badge-success">R</span> 
-         <span class="badge badge-dark">Data Cleaning </span>
-         <span class="badge badge-warning">Linear Regression</span>
-         <span class="badge badge-info">R Markdown</span>
-         <br>
-         <hr>
-         <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='https://github.com/linhuang0/Relationship_between_height_and_foot_size';" >  VIEW CODE </button>
-         <button class="btn btn-lg my-font btn-light rounded" onclick="window.location.href='Relationship_between_Height_and_Foot_Size.pdf';" >  VIEW REPORT </button>
       </section>
       
 
